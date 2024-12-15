@@ -141,9 +141,9 @@
                     <i class="fas fa-chevron-down"></i>
                 </div>
                 <div class="submenu {{ Request::is('master*') ? 'show' : '' }}">
-                <a href="{{ route('disasters.alam') }}" class="nav-item {{ Request::is('bencana/alam') ? 'active' : '' }}">
-                <i class="fas fa-list"></i> Jenis Bencana
-                    </a>
+                <a href="{{ route('disaster_types.index') }}" class="nav-item {{ Request::is('disaster_types*') ? 'active' : '' }}">
+    <i class="fas fa-list"></i> Jenis Bencana
+</a>
                     <a href="{{ route('disasters.alam') }}" class="nav-item {{ Request::is('bencana/alam') ? 'active' : '' }}">
                         <i class="fas fa-user"></i> Pengguna
                     </a>

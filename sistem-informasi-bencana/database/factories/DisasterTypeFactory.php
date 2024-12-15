@@ -1,5 +1,5 @@
 <?php
-
+//disastertypefactory
 namespace Database\Factories;
 
 use App\Models\DisasterType;

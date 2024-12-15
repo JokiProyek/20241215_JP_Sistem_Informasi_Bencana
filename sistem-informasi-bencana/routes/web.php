@@ -3,6 +3,7 @@
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PatientController;
 use App\Http\Controllers\DisasterController;
+use App\Http\Controllers\DisasterTypeController;
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/', function () {
@@ -20,9 +21,10 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/patients/create', [PatientController::class, 'create'])->name('patients.create');
     Route::post('/patients', [PatientController::class, 'store'])->name('patients.store');
     
+    Route::resource('disaster_types', DisasterTypeController::class);
      // Master Data Routes
     Route::prefix('master')->name('master.')->group(function () {
-        Route::resource('disaster-types', DisasterTypeController::class);
+        // Route::resource('disaster_types', DisasterTypeController::class);
         Route::resource('users', UserController::class);
     });
 });
